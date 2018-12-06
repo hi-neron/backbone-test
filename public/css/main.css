@@ -1,0 +1,437 @@
+@import url(/../node_modules/purecss/build/base.css);
+@import url(/../node_modules/purecss/build/grids.css);
+@import url(/../node_modules/purecss/build/grids-responsive.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700,700i);
+@font-face {
+  font-family: 'fontello';
+  src: url(../fonts/fontello.eot);
+  src: url(../fonts/fontello.eot#iefix) format('embedded-opentype'),
+       url(../fonts/fontello.woff2) format('woff2'),
+       url(../fonts/fontello.woff) format('woff'),
+       url(../fonts/fontello.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?22802629#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-mail:before { content: '\E800'; } /* '' */
+.icon-star:before { content: '\E801'; } /* '' */
+.icon-star-empty:before { content: '\E802'; } /* '' */
+.icon-camera:before { content: '\E803'; } /* '' */
+.icon-ok:before { content: '\E804'; } /* '' */
+.icon-link:before { content: '\E805'; } /* '' */
+.icon-attach:before { content: '\E806'; } /* '' */
+.icon-gplus:before { content: '\F05A'; } /* '' */
+.icon-twitter:before { content: '\F099'; } /* '' */
+.icon-facebook:before { content: '\F09A'; } /* '' */
+.icon-github-circled:before { content: '\F09B'; } /* '' */
+.icon-pinterest-circled:before { content: '\F0D2'; } /* '' */
+.icon-mail-alt:before { content: '\F0E0'; } /* '' */
+.icon-linkedin:before { content: '\F0E1'; } /* '' */
+.icon-youtube-play:before { content: '\F16A'; } /* '' */
+.icon-instagram:before { content: '\F16D'; } /* '' */
+.icon-apple:before { content: '\F179'; } /* '' */
+.icon-dribbble:before { content: '\F17D'; } /* '' */
+.icon-codeopen:before { content: '\F1CB'; } /* '' */
+.icon-angellist:before { content: '\F209'; } /* '' */
+.icon-creative-commons:before { content: '\F25E'; } /* '' */
+.icon-industry:before { content: '\F275'; } /* '' */
+.icon-facebook-squared:before { content: '\F308'; } /* '' */
+.icon-linkedin-squared:before { content: '\F30C'; } /* '' */
+
+.icon-mail:before { content: '\E800'; } /* '' */
+.icon-star:before { content: '\E801'; } /* '' */
+.icon-star-empty:before { content: '\E802'; } /* '' */
+.icon-camera:before { content: '\E803'; } /* '' */
+.icon-ok:before { content: '\E804'; } /* '' */
+.icon-link:before { content: '\E805'; } /* '' */
+.icon-attach:before { content: '\E806'; } /* '' */
+.icon-gplus:before { content: '\F05A'; } /* '' */
+.icon-twitter:before { content: '\F099'; } /* '' */
+.icon-facebook:before { content: '\F09A'; } /* '' */
+.icon-github-circled:before { content: '\F09B'; } /* '' */
+.icon-pinterest-circled:before { content: '\F0D2'; } /* '' */
+.icon-mail-alt:before { content: '\F0E0'; } /* '' */
+.icon-linkedin:before { content: '\F0E1'; } /* '' */
+.icon-youtube-play:before { content: '\F16A'; } /* '' */
+.icon-instagram:before { content: '\F16D'; } /* '' */
+.icon-apple:before { content: '\F179'; } /* '' */
+.icon-dribbble:before { content: '\F17D'; } /* '' */
+.icon-codeopen:before { content: '\F1CB'; } /* '' */
+.icon-angellist:before { content: '\F209'; } /* '' */
+.icon-creative-commons:before { content: '\F25E'; } /* '' */
+.icon-industry:before { content: '\F275'; } /* '' */
+.icon-facebook-squared:before { content: '\F308'; } /* '' */
+.icon-linkedin-squared:before { content: '\F30C'; } /* '' */
+@charset "UTF-8";
+body {
+  margin: 0;
+  background-color: white; }
+
+h1 {
+  margin: 0; }
+
+#app {
+  width: 100%;
+  position: relative;
+  color: #dddddd;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 100%; }
+  #app header {
+    border-bottom: 2px solid #dd0000;
+    box-shadow: 0 1px 0 rgba(51, 51, 51, 0.1);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#434343+0,222222+100 */
+    background: #434343;
+    /* Old browsers */
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #434343 0%, #222222 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#434343', endColorstr='#222222',GradientType=0 );
+    /* IE6-9 */ }
+    #app header div {
+      display: flex; }
+      #app header div .logo {
+        margin-left: 50px;
+        align-self: center; }
+    #app header nav .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px; }
+      #app header nav .center .drop {
+        position: relative; }
+        #app header nav .center .drop:hover {
+          cursor: pointer; }
+          #app header nav .center .drop:hover .d-show {
+            display: block; }
+        #app header nav .center .drop .d-show {
+          top: 80px;
+          left: 18px;
+          display: none;
+          position: absolute;
+          background-color: #f3f3f3;
+          list-style-type: none;
+          margin: 0;
+          border: 1px solid rgba(153, 153, 153, 0.4);
+          padding: 0;
+          z-index: 1; }
+          #app header nav .center .drop .d-show:before {
+            content: '\25B2';
+            color: #dd0000;
+            font-size: 0.6em;
+            position: absolute;
+            top: -10px; }
+          #app header nav .center .drop .d-show li {
+            margin: 0px 0px;
+            padding: 15px 20px;
+            color: #999999 !important; }
+            #app header nav .center .drop .d-show li:hover {
+              background-color: #999999;
+              color: #ffffff !important;
+              cursor: pointer; }
+      #app header nav .center .items {
+        align-self: center; }
+        #app header nav .center .items a {
+          margin: 20px;
+          font-size: 11pt;
+          text-decoration: none;
+          color: #ffffff;
+          opacity: 0.7; }
+  #app article {
+    font-family: "Open Sans"; }
+    #app article .top h1 {
+      font-weight: 500;
+      margin-top: 80px;
+      color: #333333 !important;
+      font-size: 1.7rem;
+      margin-bottom: 0; }
+    #app article .top h2 {
+      margin-top: 0;
+      color: #dd0000;
+      font-weight: 500;
+      font-family: "Open Sans";
+      font-size: 0.9rem; }
+    #app article .top hr {
+      opacity: 0.3; }
+    #app article .top .social {
+      display: flex;
+      justify-content: flex-end; }
+      #app article .top .social a {
+        text-decoration: none;
+        color: #afafaf; }
+        #app article .top .social a:hover {
+          color: #333333; }
+      #app article .top .social .share {
+        font-family: "Open Sans";
+        font-style: italic;
+        margin-right: 2em; }
+      #app article .top .social .facebook, #app article .top .social .twitter, #app article .top .social .mail {
+        margin: 0 5px; }
+    #app article .middle {
+      margin-top: 4em;
+      margin-bottom: 4em; }
+      #app article .middle .left {
+        font-weight: 400;
+        font-family: "Open Sans";
+        color: #333333;
+        font-size: 0.9em;
+        line-height: 1.6rem; }
+      #app article .middle .right {
+        margin-bottom: 1em; }
+        #app article .middle .right img {
+          float: right;
+          width: 70%; }
+  #app .bottom {
+    background-color: #f3f3f3;
+    padding: 4em 0 4em 0;
+    border-top: 1px solid #dddddd; }
+    #app .bottom .title {
+      color: #333333;
+      font-size: 1.6em;
+      font-family: "Open Sans" !important;
+      font-weight: 300; }
+    #app .bottom .content {
+      margin-top: 2em; }
+      #app .bottom .content .card {
+        line-height: 1em; }
+        #app .bottom .content .card .image {
+          position: relative;
+          overflow: hidden;
+          width: 100%; }
+          #app .bottom .content .card .image .img-label {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            padding: 10px;
+            height: 115px;
+            line-height: 1em;
+            background-color: #080909; }
+            #app .bottom .content .card .image .img-label .day {
+              font-family: "Open Sans";
+              font-weight: 500; }
+            #app .bottom .content .card .image .img-label .month {
+              font-family: "Open Sans";
+              font-weight: 800; }
+            #app .bottom .content .card .image .img-label .year {
+              font-family: "Open Sans";
+              font-weight: 500;
+              color: #dd0000; }
+        #app .bottom .content .card .label {
+          margin-top: 5px;
+          font-family: "Open Sans";
+          color: #333333;
+          font-size: 0.9em;
+          font-weight: 500; }
+        #app .bottom .content .card .tag {
+          font-family: "Open Sans";
+          color: #dd0000;
+          font-weight: 500;
+          font-size: 0.8em; }
+  #app footer {
+    background-color: #dd0000; }
+    #app footer .footer-content {
+      height: 80px;
+      align-content: center;
+      color: #ffffff; }
+      #app footer .footer-content .f-logo a img {
+        width: 130px; }
+      #app footer .footer-content .f-legal {
+        font-family: "Open Sans";
+        font-style: italic;
+        line-height: 1em;
+        font-size: 0.95em; }
+
+@media screen and (max-width: 600px) {
+  body #app header {
+    border-bottom: 2px solid #dd0000;
+    box-shadow: 0 1px 0 rgba(51, 51, 51, 0.1);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#434343+0,222222+100 */
+    background: #434343;
+    /* Old browsers */
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #434343 0%, #222222 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#434343', endColorstr='#222222',GradientType=0 );
+    /* IE6-9 */ }
+    body #app header div {
+      display: flex; }
+      body #app header div .logo {
+        margin-left: 50px;
+        align-self: center; }
+        body #app header div .logo img {
+          margin-top: 5px;
+          width: 60%; }
+    body #app header nav .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px !important; }
+      body #app header nav .center .items {
+        align-self: center;
+        display: none; }
+      body #app header nav .center:after {
+        content: '\2261';
+        font-size: 2em;
+        position: absolute;
+        right: 30px; }
+  body #app article {
+    font-family: "Open Sans";
+    padding: 0 1.2em; }
+    body #app article .top h1 {
+      margin-top: 30px; }
+    body #app article .top hr {
+      margin: 0;
+      padding: 0; }
+    body #app article .top .social {
+      display: none !important; }
+  body #app .middle {
+    margin-top: 1em;
+    margin-bottom: 4em; }
+    body #app .middle .left {
+      font-weight: 400;
+      font-family: "Open Sans";
+      color: #333333;
+      font-size: 0.9em;
+      line-height: 1.6rem; }
+    body #app .middle .right {
+      order: -1; }
+      body #app .middle .right img {
+        float: none;
+        width: 100%; }
+  body #app .bottom {
+    background-color: #f3f3f3;
+    padding: 4em 1.2em 4em 1.2em;
+    border-top: 1px solid #dddddd; }
+    body #app .bottom .title {
+      color: #333333;
+      font-size: 1.6em;
+      font-family: "Open Sans" !important;
+      font-weight: 300; }
+    body #app .bottom .content {
+      margin-top: 2em; }
+      body #app .bottom .content .card {
+        line-height: 1em;
+        margin-bottom: 1em; }
+        body #app .bottom .content .card .image {
+          position: relative;
+          overflow: hidden;
+          width: 100%; }
+          body #app .bottom .content .card .image .img-label {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            padding: 10px;
+            height: 115px;
+            line-height: 1em;
+            background-color: #080909; }
+            body #app .bottom .content .card .image .img-label .day {
+              font-family: "Open Sans";
+              font-weight: 500; }
+            body #app .bottom .content .card .image .img-label .month {
+              font-family: "Open Sans";
+              font-weight: 800; }
+            body #app .bottom .content .card .image .img-label .year {
+              font-family: "Open Sans";
+              font-weight: 500;
+              color: #dd0000; }
+        body #app .bottom .content .card .label {
+          margin-top: 5px;
+          font-family: "Open Sans";
+          color: #333333;
+          font-size: 0.9em;
+          font-weight: 500; }
+        body #app .bottom .content .card .tag {
+          font-family: "Open Sans";
+          color: #dd0000;
+          font-weight: 500;
+          font-size: 0.8em; }
+  body #app footer {
+    text-align: center;
+    padding: 2em 0; }
+    body #app footer div {
+      margin-top: 0.3em; } }
+
+@media screen and (max-width: 1000px) {
+  body #app header {
+    border-bottom: 2px solid #dd0000;
+    box-shadow: 0 1px 0 rgba(51, 51, 51, 0.1);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#434343+0,222222+100 */
+    background: #434343;
+    /* Old browsers */
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #434343 0%, #222222 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#434343', endColorstr='#222222',GradientType=0 );
+    /* IE6-9 */ }
+    body #app header div {
+      display: flex; }
+      body #app header div .logo {
+        margin-left: 50px;
+        align-self: center; }
+        body #app header div .logo img {
+          margin-top: 5px;
+          width: 60%; }
+    body #app header nav .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70px; }
+      body #app header nav .center .items {
+        align-self: center;
+        display: none; }
+      body #app header nav .center:after {
+        content: '\2261';
+        font-size: 2em;
+        position: absolute;
+        right: 30px; } }
+
