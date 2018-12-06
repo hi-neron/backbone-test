@@ -1,0 +1,24 @@
+// Color scheme
+$color1: #ffffff;
+$color3: #f3f3f3;
+$color4: #dddddd;
+$color2: #333333;
+$color8: #080909;
+$color6: #999999;
+$color7: #afafaf;
+$color5: #dd0000;
+
+// Color pieces
+$background:  rgba($color1, 1);
+$text:  $color4;
+
+
+@mixin background-grad {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#434343+0,222222+100 */
+background: #434343; /* Old browsers */
+background: -moz-linear-gradient(top, #434343 0%, #222222 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #434343 0%,#222222 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #434343 0%,#222222 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#434343', endColorstr='#222222',GradientType=0 ); /* IE6-9 */
+}
+
